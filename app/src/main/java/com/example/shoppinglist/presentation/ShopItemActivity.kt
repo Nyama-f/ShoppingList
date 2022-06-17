@@ -24,7 +24,9 @@ class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnShopItemEditing
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_item)
         parseIntent()
-        launchRightMode()
+        if(savedInstanceState == null) {
+            launchRightMode()
+        }
     }
 
 
@@ -38,7 +40,6 @@ class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnShopItemEditing
             .replace(R.id.shop_item_container, fragment)
             .commit()
     }
-
 
 
     private fun parseIntent() {
