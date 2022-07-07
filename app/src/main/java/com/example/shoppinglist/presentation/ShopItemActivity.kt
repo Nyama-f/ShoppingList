@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppinglist.R
@@ -83,6 +84,7 @@ class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnShopItemEditing
     }
 
     override fun onShopItemEditingFinished() {
+        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
         finish()
     }
 }
